@@ -62,7 +62,6 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.91919F));
@@ -72,13 +71,14 @@
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59.89583F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.10417F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(397, 411);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(454, 417);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // btnSave
@@ -88,7 +88,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSave.Location = new System.Drawing.Point(169, 366);
+            this.btnSave.Location = new System.Drawing.Point(193, 372);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(109, 39);
             this.btnSave.TabIndex = 1;
@@ -104,7 +104,7 @@
             this.tableLayoutPanel2.Controls.Add(this.txtAddress, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtPhone, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.txtMail, 0, 2);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(169, 219);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(193, 224);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.0201F));
@@ -170,7 +170,7 @@
             this.tableLayoutPanel3.Controls.Add(this.label4, 0, 3);
             this.tableLayoutPanel3.Controls.Add(this.label5, 0, 4);
             this.tableLayoutPanel3.Controls.Add(this.label6, 0, 5);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(169, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(193, 5);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 6;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -179,7 +179,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(225, 210);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(258, 210);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
             // lblRegister
@@ -187,9 +187,9 @@
             this.lblRegister.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRegister.AutoSize = true;
             this.lblRegister.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblRegister.Location = new System.Drawing.Point(115, 186);
+            this.lblRegister.Location = new System.Drawing.Point(132, 186);
             this.lblRegister.Name = "lblRegister";
-            this.lblRegister.Size = new System.Drawing.Size(107, 13);
+            this.lblRegister.Size = new System.Drawing.Size(123, 13);
             this.lblRegister.TabIndex = 11;
             this.lblRegister.Text = "Баазаас утга авна";
             // 
@@ -198,9 +198,9 @@
             this.lblFirst.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFirst.AutoSize = true;
             this.lblFirst.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblFirst.Location = new System.Drawing.Point(115, 151);
+            this.lblFirst.Location = new System.Drawing.Point(132, 151);
             this.lblFirst.Name = "lblFirst";
-            this.lblFirst.Size = new System.Drawing.Size(107, 13);
+            this.lblFirst.Size = new System.Drawing.Size(123, 13);
             this.lblFirst.TabIndex = 10;
             this.lblFirst.Text = "Баазаас утга авна";
             // 
@@ -209,20 +209,21 @@
             this.lblLast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLast.AutoSize = true;
             this.lblLast.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblLast.Location = new System.Drawing.Point(115, 116);
+            this.lblLast.Location = new System.Drawing.Point(132, 116);
             this.lblLast.Name = "lblLast";
-            this.lblLast.Size = new System.Drawing.Size(107, 13);
+            this.lblLast.Size = new System.Drawing.Size(123, 13);
             this.lblLast.TabIndex = 9;
             this.lblLast.Text = "Баазаас утга авна";
+            this.lblLast.Click += new System.EventHandler(this.lblLast_Click);
             // 
             // lblType
             // 
             this.lblType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblType.AutoSize = true;
             this.lblType.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblType.Location = new System.Drawing.Point(115, 81);
+            this.lblType.Location = new System.Drawing.Point(132, 81);
             this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(107, 13);
+            this.lblType.Size = new System.Drawing.Size(123, 13);
             this.lblType.TabIndex = 8;
             this.lblType.Text = "Баазаас утга авна";
             // 
@@ -231,9 +232,9 @@
             this.lblPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPass.AutoSize = true;
             this.lblPass.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblPass.Location = new System.Drawing.Point(115, 46);
+            this.lblPass.Location = new System.Drawing.Point(132, 46);
             this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(107, 13);
+            this.lblPass.Size = new System.Drawing.Size(123, 13);
             this.lblPass.TabIndex = 7;
             this.lblPass.Text = "Баазаас утга авна";
             // 
@@ -242,9 +243,9 @@
             this.lblUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUsername.AutoSize = true;
             this.lblUsername.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblUsername.Location = new System.Drawing.Point(115, 11);
+            this.lblUsername.Location = new System.Drawing.Point(132, 11);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(107, 13);
+            this.lblUsername.Size = new System.Drawing.Size(123, 13);
             this.lblUsername.TabIndex = 6;
             this.lblUsername.Text = "Баазаас утга авна";
             this.lblUsername.Click += new System.EventHandler(this.label7_Click);
@@ -255,7 +256,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 13);
+            this.label1.Size = new System.Drawing.Size(123, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "UserName:";
             // 
@@ -265,7 +266,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 46);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 13);
+            this.label2.Size = new System.Drawing.Size(123, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password:";
             // 
@@ -273,9 +274,9 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 74);
+            this.label3.Location = new System.Drawing.Point(3, 81);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 26);
+            this.label3.Size = new System.Drawing.Size(123, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Хэрэглэгчийн төрөл:";
             // 
@@ -285,7 +286,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(3, 116);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 13);
+            this.label4.Size = new System.Drawing.Size(123, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Овог:";
             // 
@@ -295,7 +296,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(3, 151);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 13);
+            this.label5.Size = new System.Drawing.Size(123, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "Нэр:";
             // 
@@ -305,7 +306,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(3, 186);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 13);
+            this.label6.Size = new System.Drawing.Size(123, 13);
             this.label6.TabIndex = 5;
             this.label6.Text = "Регистрийн дугаар:";
             // 
@@ -318,7 +319,7 @@
             this.tableLayoutPanel4.Controls.Add(this.label15, 0, 2);
             this.tableLayoutPanel4.Controls.Add(this.label14, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.label13, 0, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 219);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(27, 224);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.54546F));
@@ -361,9 +362,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "uc_user";
-            this.Size = new System.Drawing.Size(403, 417);
+            this.Size = new System.Drawing.Size(454, 417);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();

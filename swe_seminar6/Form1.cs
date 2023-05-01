@@ -22,63 +22,83 @@ namespace swe_seminar6
         string db = "Data Source=DESKTOP-FSF2P1H;Initial Catalog=nw;Integrated Security=True";
         private void button1_Click(object sender, EventArgs e)
         {
-         if (guna2TextBox1.Text == "") {
-              //  MessageBox.Show("Нэвтрэх нэрээ оруулна уу!");
+         
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            if (guna2TextBox1.Text == "")
+            {
+                //  MessageBox.Show("Нэвтрэх нэрээ оруулна уу!");
                 lblRed.Text = "Нэвтрэх нэрээ оруулна уу";
             }
-         else if (textBox2.Text == "")
+            else if (guna2TextBox2.Text == "")
             {
                 // MessageBox.Show("Нууц үгээ оруулна уу!");
                 lblRed.Text = "Нууц үгээ оруулна уу!";
             }
-         else
-            {     
+            else
+            {
                 try
                 {
                     String query = "SELECT * FROM [dbo].[user] WHERE username = '" + guna2TextBox1.Text + "' AND password = '" + "'";
                     SqlConnection con = new SqlConnection(db);
-                   
+
 
                     string username = guna2TextBox1.Text;
-                    string password = textBox2.Text;
+                    string password = guna2TextBox2.Text;
 
-                     SqlCommand cmd = new SqlCommand("select * from [dbo].[Users] where username = @username and password = @password", con);
+                    SqlCommand cmd = new SqlCommand("select * from [dbo].[Users] where username = @username and password = @password", con);
 
                     cmd.Parameters.AddWithValue("@username", guna2TextBox1.Text);
-                    cmd.Parameters.AddWithValue("@password", textBox2.Text);
+                    cmd.Parameters.AddWithValue("@password", guna2TextBox2.Text);
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
 
                     DataSet ds = new DataSet();
 
                     da.Fill(ds);
 
-                    if(ds.Tables[0].Rows.Count > 0)
+                    if (ds.Tables[0].Rows.Count > 0)
                     {
-                      //  MessageBox.Show("Амжилттай нэвтэрлээ");
+                        //  MessageBox.Show("Амжилттай нэвтэрлээ");
                         lblRed.Text = "Амжилттай нэвтэрлээ";
                         int uid = int.Parse(ds.Tables[0].Rows[0]["id"].ToString());
 
-                     
-                      
-
                         new Form2().Show();
                         this.Hide();
-
-
                     }
                     else
                     {
-                       // MessageBox.Show("Нэвтрэх нэр эсвэл нууц үг буруу байна");
+                        // MessageBox.Show("Нэвтрэх нэр эсвэл нууц үг буруу байна");
                         lblRed.Text = "Нэвтрэх нэр эсвэл нууц үг буруу байна";
                     }
                 }
-                catch (Exception ex) {
+                catch (Exception ex)
+                {
                     MessageBox.Show("ymar nege aldaa" + ex);
                 }
             }
         }
 
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
 
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
     }
 
     public partial class User

@@ -34,7 +34,10 @@ namespace swe_seminar6
             adap.Fill(ds);
 
           //  dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.DataSource = ds.Tables[0];
+            guna2DataGridView1.DataSource = ds.Tables[0];
+
+            this.guna2DataGridView1.Columns["ProductID"].Visible = false;
+      
         }
 
 
@@ -54,9 +57,25 @@ namespace swe_seminar6
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            DataGridViewRow row = dataGridView1.CurrentRow;
+            DataGridViewRow row = guna2DataGridView1.CurrentRow;
             int id = Convert.ToInt32(row.Cells["ProductID"].Value);
             int ret_id = frm_edit.get_data(id);
+            if (id != 0)
+            {
+                guna2DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+                guna2DataGridView1.ClearSelection();
+
+                foreach (DataGridViewRow item in guna2DataGridView1.Rows)
+                {
+                    if (Convert.ToInt32(item.Cells[0].Value) == id)
+                    {
+                        item.Selected = true;
+                        guna2DataGridView1.FirstDisplayedScrollingRowIndex = item.Index;
+                        return;
+                    }
+                }
+            }
             get_data();
           //  frm_edit frm_edit = new frm_edit();
            // frm_edit.ShowDialog();
@@ -77,16 +96,16 @@ namespace swe_seminar6
             get_data();
             if (id != 0)
             {
-                dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                guna2DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-                dataGridView1.ClearSelection();
+                guna2DataGridView1.ClearSelection();
 
-                foreach (DataGridViewRow item in dataGridView1.Rows)
+                foreach (DataGridViewRow item in guna2DataGridView1.Rows)
                 {
                     if (Convert.ToInt32(item.Cells[0].Value) == id)
                     {
                         item.Selected = true;
-                        dataGridView1.FirstDisplayedScrollingRowIndex = item.Index;
+                        guna2DataGridView1.FirstDisplayedScrollingRowIndex = item.Index;
                         return;
                     }
                 }
@@ -103,6 +122,11 @@ namespace swe_seminar6
             SqlConnection con = new SqlConnection(db);
             con.Open();
             SqlCommand cmd = new SqlCommand("Delete Users where ProductID");
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
