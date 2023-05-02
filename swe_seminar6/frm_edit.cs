@@ -18,7 +18,8 @@ namespace swe_seminar6
         int product_id = 0;
         public static int ret_product_id = 0;
         string db = "Data Source=DESKTOP-FSF2P1H;Initial Catalog=nw;Integrated Security=True";
-
+        //laptop 
+        // string db = "Data Source=DESKTOP-VUTIQH1;Initial Catalog=nw;Integrated Security=True";
         public frm_edit()
         {
             InitializeComponent();

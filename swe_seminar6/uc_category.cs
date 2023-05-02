@@ -13,7 +13,8 @@ namespace swe_seminar6
 {
     public partial class uc_category : UserControl
     {
-
+        //laptop 
+        // string db = "Data Source=DESKTOP-VUTIQH1;Initial Catalog=nw;Integrated Security=True";
         string db = "Data Source=DESKTOP-FSF2P1H;Initial Catalog=nw;Integrated Security=True";
         public uc_category()
         {

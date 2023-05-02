@@ -20,6 +20,9 @@ namespace swe_seminar6
 
 
         string db = "Data Source=DESKTOP-FSF2P1H;Initial Catalog=nw;Integrated Security=True";
+
+        //laptop 
+        // string db = "Data Source=DESKTOP-VUTIQH1;Initial Catalog=nw;Integrated Security=True
         private void button1_Click(object sender, EventArgs e)
         {
          

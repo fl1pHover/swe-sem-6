@@ -18,6 +18,8 @@ namespace swe_seminar6
     {
 
         string db = "Data Source=DESKTOP-FSF2P1H;Initial Catalog=nw;Integrated Security=True";
+        //laptop 
+        // string db = "Data Source=DESKTOP-VUTIQH1;Initial Catalog=nw;Integrated Security=True";
         public int id;
         public ProductControl()
         {
@@ -55,6 +57,29 @@ namespace swe_seminar6
          // }
         }
 
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            int id = frm_edit.get_data(0);
+            get_data();
+            if (id != 0)
+            {
+                guna2DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+                guna2DataGridView1.ClearSelection();
+
+                foreach (DataGridViewRow item in guna2DataGridView1.Rows)
+                {
+                    if (Convert.ToInt32(item.Cells[0].Value) == id)
+                    {
+                        item.Selected = true;
+                        guna2DataGridView1.FirstDisplayedScrollingRowIndex = item.Index;
+                        return;
+                    }
+                }
+            }
+        }
+
         private void btnEdit_Click(object sender, EventArgs e)
         {
             DataGridViewRow row = guna2DataGridView1.CurrentRow;
@@ -90,27 +115,7 @@ namespace swe_seminar6
          
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            int id =  frm_edit.get_data(0);
-            get_data();
-            if (id != 0)
-            {
-                guna2DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
-                guna2DataGridView1.ClearSelection();
-
-                foreach (DataGridViewRow item in guna2DataGridView1.Rows)
-                {
-                    if (Convert.ToInt32(item.Cells[0].Value) == id)
-                    {
-                        item.Selected = true;
-                        guna2DataGridView1.FirstDisplayedScrollingRowIndex = item.Index;
-                        return;
-                    }
-                }
-            }
-        }
+       
 
         private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
         {

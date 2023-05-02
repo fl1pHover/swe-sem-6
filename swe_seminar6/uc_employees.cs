@@ -11,13 +11,14 @@ using System.Windows.Forms;
 
 namespace swe_seminar6
 {
-    public partial class uc_order : UserControl
+    public partial class uc_employees : UserControl
     {
+
         //laptop 
         // string db = "Data Source=DESKTOP-VUTIQH1;Initial Catalog=nw;Integrated Security=True";
         string db = "Data Source=DESKTOP-FSF2P1H;Initial Catalog=nw;Integrated Security=True";
         public int id;
-        public uc_order()
+        public uc_employees()
         {
             InitializeComponent();
         }
@@ -25,7 +26,7 @@ namespace swe_seminar6
         {
             SqlConnection con = new SqlConnection(db);
             con.Open();
-            string query = "SELECT * from Orders";
+            string query = "SELECT * from Employees";
             SqlDataAdapter adap = new SqlDataAdapter(query, con);
             DataSet ds = new DataSet();
             adap.Fill(ds);
@@ -33,23 +34,27 @@ namespace swe_seminar6
             //guna2DataGridView1.AutoGenerateColumns = false;
             guna2DataGridView1.DataSource = ds.Tables[0];
 
-           // this.guna2DataGridView1.Columns["OrderID"].Visible = false;
-            this.guna2DataGridView1.Columns["OrderDate"].Visible = false;
-            this.guna2DataGridView1.Columns["CustomerID"].Visible = false;
-            this.guna2DataGridView1.Columns["RequiredDate"].Visible = false;
-            this.guna2DataGridView1.Columns["EmployeeID"].Visible = false;
-            this.guna2DataGridView1.Columns["ShippedDate"].Visible = false;
-            this.guna2DataGridView1.Columns["ShipPostalCode"].Visible = false;
-            this.guna2DataGridView1.Columns["ShipVia"].Visible = false;
-            this.guna2DataGridView1.Columns["ShipRegion"].Visible = false;
+            // this.guna2DataGridView1.Columns["OrderID"].Visible = false;
+            this.guna2DataGridView1.Columns["TitleOfCourtesy"].Visible = false;
+            this.guna2DataGridView1.Columns["BirthDate"].Visible = false;
+            this.guna2DataGridView1.Columns["HireDate"].Visible = false;
+            this.guna2DataGridView1.Columns["Extension"].Visible = false;
+            this.guna2DataGridView1.Columns["ReportsTo"].Visible = false;
+            this.guna2DataGridView1.Columns["PostalCode"].Visible = false;
+            this.guna2DataGridView1.Columns["PhotoPath"].Visible = false;
+        
         }
 
-        private void uc_order_Load(object sender, EventArgs e)
+        private void uc_employees_Load(object sender, EventArgs e)
         {
-            get_data();
+          
+        }
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+         
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnAdd_Click_1(object sender, EventArgs e)
         {
             int id = frm_edit_order.get_data(0);
             get_data();
@@ -71,27 +76,8 @@ namespace swe_seminar6
             }
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void uc_employees_Load_1(object sender, EventArgs e)
         {
-            DataGridViewRow row = guna2DataGridView1.CurrentRow;
-            int id = Convert.ToInt32(row.Cells["OrderID"].Value);
-            int a_id = frm_edit_order.get_data(id);
-            if (id != 0)
-            {
-                guna2DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
-                guna2DataGridView1.ClearSelection();
-
-                foreach (DataGridViewRow item in guna2DataGridView1.Rows)
-                {
-                    if (Convert.ToInt32(item.Cells[0].Value) == id)
-                    {
-                        item.Selected = true;
-                        guna2DataGridView1.FirstDisplayedScrollingRowIndex = item.Index;
-                        return;
-                    }
-                }
-            }
             get_data();
         }
     }

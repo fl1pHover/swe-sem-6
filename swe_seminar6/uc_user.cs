@@ -51,8 +51,6 @@ namespace swe_seminar6
             txtPhone.Text = ds.Tables[0].Rows[0]["phone"].ToString();
             txtMail.Text = ds.Tables[0].Rows[0]["email"].ToString();
 
-
-
             base.OnLoad(e);
         }
 
@@ -62,7 +60,7 @@ namespace swe_seminar6
             con.Open();
             try
             {
-                string query = "UPDATE Users SET address = '" + txtAddress.Text + "', phone ='" + txtPhone.Text + "', phone ='" + txtPhone.Text + "', email = '" + txtMail.Text + "'  WHERE id =" + u_id + " ";
+                string query = "UPDATE Users SET address = '" + txtAddress.Text + "', phone ='" + txtPhone.Text + "', email = '" + txtMail.Text + "'  WHERE id =" + 1 + " ";
                 SqlCommand com = new SqlCommand(query, con);
                 SqlCommand com1 = new SqlCommand();
                 com1.Connection = con;

@@ -31,28 +31,28 @@ namespace swe_seminar6
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Хэрэглэгчийн төрөл");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Хэрэглэгчийн бүртгэл");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Хэрэглэгч", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Бүтээгдэхүүний төрөл");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Бүтээгдэхүүний үнэ");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Бүтээгдэхүүний бүртгэл");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Бүтээгдэхүүн", new System.Windows.Forms.TreeNode[] {
-            treeNode4,
-            treeNode5,
-            treeNode6});
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Борлуулалт");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Худалдан авалт");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Ажил гүйлгээ", new System.Windows.Forms.TreeNode[] {
-            treeNode8,
-            treeNode9});
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Эд хөрөнгийн бүртгэл");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Эд хөрөнгийн төрөл");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Эд хөрөнгө", new System.Windows.Forms.TreeNode[] {
-            treeNode11,
-            treeNode12});
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Хэрэглэгчийн төрөл");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Хэрэглэгчийн бүртгэл");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Хэрэглэгч", new System.Windows.Forms.TreeNode[] {
+            treeNode14,
+            treeNode15});
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Бүтээгдэхүүний төрөл");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Бүтээгдэхүүний үнэ");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Бүтээгдэхүүний бүртгэл");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Бүтээгдэхүүн", new System.Windows.Forms.TreeNode[] {
+            treeNode17,
+            treeNode18,
+            treeNode19});
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Борлуулалт");
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Худалдан авалт");
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Ажил гүйлгээ", new System.Windows.Forms.TreeNode[] {
+            treeNode21,
+            treeNode22});
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Эд хөрөнгийн бүртгэл");
+            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Эд хөрөнгийн төрөл");
+            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Эд хөрөнгө", new System.Windows.Forms.TreeNode[] {
+            treeNode24,
+            treeNode25});
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
@@ -77,39 +77,39 @@ namespace swe_seminar6
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Margin = new System.Windows.Forms.Padding(0);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Node1";
-            treeNode1.Text = "Хэрэглэгчийн төрөл";
-            treeNode2.Checked = true;
-            treeNode2.Name = "Node2";
-            treeNode2.Text = "Хэрэглэгчийн бүртгэл";
-            treeNode3.Checked = true;
-            treeNode3.Name = "Node0";
-            treeNode3.Text = "Хэрэглэгч";
-            treeNode4.Name = "Node1";
-            treeNode4.Text = "Бүтээгдэхүүний төрөл";
-            treeNode5.Name = "Node2";
-            treeNode5.Text = "Бүтээгдэхүүний үнэ";
-            treeNode6.Name = "product_type";
-            treeNode6.Text = "Бүтээгдэхүүний бүртгэл";
-            treeNode7.Name = "Product";
-            treeNode7.Text = "Бүтээгдэхүүн";
-            treeNode8.Name = "Node1";
-            treeNode8.Text = "Борлуулалт";
-            treeNode9.Name = "Node2";
-            treeNode9.Text = "Худалдан авалт";
-            treeNode10.Name = "Node0";
-            treeNode10.Text = "Ажил гүйлгээ";
-            treeNode11.Name = "Node4";
-            treeNode11.Text = "Эд хөрөнгийн бүртгэл";
-            treeNode12.Name = "Node5";
-            treeNode12.Text = "Эд хөрөнгийн төрөл";
-            treeNode13.Name = "Node3";
-            treeNode13.Text = "Эд хөрөнгө";
+            treeNode14.Name = "Node1";
+            treeNode14.Text = "Хэрэглэгчийн төрөл";
+            treeNode15.Checked = true;
+            treeNode15.Name = "Node2";
+            treeNode15.Text = "Хэрэглэгчийн бүртгэл";
+            treeNode16.Checked = true;
+            treeNode16.Name = "Node0";
+            treeNode16.Text = "Хэрэглэгч";
+            treeNode17.Name = "Node1";
+            treeNode17.Text = "Бүтээгдэхүүний төрөл";
+            treeNode18.Name = "Node2";
+            treeNode18.Text = "Бүтээгдэхүүний үнэ";
+            treeNode19.Name = "product_type";
+            treeNode19.Text = "Бүтээгдэхүүний бүртгэл";
+            treeNode20.Name = "Product";
+            treeNode20.Text = "Бүтээгдэхүүн";
+            treeNode21.Name = "Node1";
+            treeNode21.Text = "Борлуулалт";
+            treeNode22.Name = "Node2";
+            treeNode22.Text = "Худалдан авалт";
+            treeNode23.Name = "Node0";
+            treeNode23.Text = "Ажил гүйлгээ";
+            treeNode24.Name = "Node4";
+            treeNode24.Text = "Эд хөрөнгийн бүртгэл";
+            treeNode25.Name = "Node5";
+            treeNode25.Text = "Эд хөрөнгийн төрөл";
+            treeNode26.Name = "Node3";
+            treeNode26.Text = "Эд хөрөнгө";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode7,
-            treeNode10,
-            treeNode13});
+            treeNode16,
+            treeNode20,
+            treeNode23,
+            treeNode26});
             this.treeView1.Size = new System.Drawing.Size(342, 394);
             this.treeView1.TabIndex = 1;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -145,8 +145,9 @@ namespace swe_seminar6
             // guna2ControlBox1
             // 
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BorderColor = System.Drawing.Color.BlanchedAlmond;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.LightGray;
             this.guna2ControlBox1.Location = new System.Drawing.Point(896, 0);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(30, 29);
@@ -155,9 +156,10 @@ namespace swe_seminar6
             // guna2ControlBox3
             // 
             this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox3.BorderColor = System.Drawing.Color.BlanchedAlmond;
             this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox3.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox3.IconColor = System.Drawing.Color.LightGray;
             this.guna2ControlBox3.Location = new System.Drawing.Point(830, 0);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(30, 29);
@@ -166,9 +168,10 @@ namespace swe_seminar6
             // guna2ControlBox2
             // 
             this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.BorderColor = System.Drawing.Color.BlanchedAlmond;
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.LightGray;
             this.guna2ControlBox2.Location = new System.Drawing.Point(863, 0);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(30, 29);
@@ -205,6 +208,13 @@ namespace swe_seminar6
                 splitContainer1.Panel2.Controls.Clear();
                 splitContainer1.Panel2.Controls.Add(uc);
             }
+            if (tmp == "Хэрэглэгчийн төрөл")
+            {
+                uc_employees em = new uc_employees();
+                em.Dock = DockStyle.Fill;
+                splitContainer1.Panel2.Controls.Clear();
+                splitContainer1.Panel2.Controls.Add(em);
+            }
             if (tmp == "Бүтээгдэхүүний бүртгэл")
             {
                 ProductControl pc = new ProductControl();
@@ -226,6 +236,7 @@ namespace swe_seminar6
                 splitContainer1.Panel2.Controls.Clear();
                 splitContainer1.Panel2.Controls.Add(or);
             }
+           
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
