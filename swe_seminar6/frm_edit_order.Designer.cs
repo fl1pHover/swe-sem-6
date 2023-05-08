@@ -36,19 +36,19 @@
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.txt_shipAddress = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_country = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_city = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_freight = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ачаа = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.txt_shipName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txt_country = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txt_city = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Ачаа = new System.Windows.Forms.Label();
-            this.txt_freight = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_shipName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_shipAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -130,7 +130,6 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 35);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
@@ -169,37 +168,24 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(382, 359);
             this.tableLayoutPanel1.TabIndex = 13;
             // 
-            // label5
+            // txt_shipAddress
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(2, 312);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(151, 19);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Улс";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // guna2ControlBox2
-            // 
-            this.guna2ControlBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.Gainsboro;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(399, 0);
-            this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(35, 29);
-            this.guna2ControlBox2.TabIndex = 19;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // errorProvider2
-            // 
-            this.errorProvider2.ContainerControl = this;
+            this.txt_shipAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_shipAddress.DefaultText = "";
+            this.txt_shipAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_shipAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_shipAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_shipAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_shipAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_shipAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_shipAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_shipAddress.Location = new System.Drawing.Point(158, 145);
+            this.txt_shipAddress.Name = "txt_shipAddress";
+            this.txt_shipAddress.PasswordChar = '\0';
+            this.txt_shipAddress.PlaceholderText = "";
+            this.txt_shipAddress.SelectedText = "";
+            this.txt_shipAddress.Size = new System.Drawing.Size(200, 36);
+            this.txt_shipAddress.TabIndex = 22;
             // 
             // txt_country
             // 
@@ -223,19 +209,6 @@
             this.txt_country.Size = new System.Drawing.Size(189, 34);
             this.txt_country.TabIndex = 19;
             // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(2, 239);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(151, 19);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Хот";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // txt_city
             // 
             this.txt_city.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -257,45 +230,6 @@
             this.txt_city.SelectedText = "";
             this.txt_city.Size = new System.Drawing.Size(189, 34);
             this.txt_city.TabIndex = 18;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(2, 168);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Хүргэлтийн хаяг";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(2, 97);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Хүргэлтийн нэр";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // Ачаа
-            // 
-            this.Ачаа.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.Ачаа.AutoSize = true;
-            this.Ачаа.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ачаа.Location = new System.Drawing.Point(2, 26);
-            this.Ачаа.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Ачаа.Name = "Ачаа";
-            this.Ачаа.Size = new System.Drawing.Size(151, 19);
-            this.Ачаа.TabIndex = 0;
-            this.Ачаа.Text = "Ачаа";
-            this.Ачаа.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txt_freight
             // 
@@ -319,6 +253,71 @@
             this.txt_freight.Size = new System.Drawing.Size(189, 34);
             this.txt_freight.TabIndex = 17;
             // 
+            // Ачаа
+            // 
+            this.Ачаа.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Ачаа.AutoSize = true;
+            this.Ачаа.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ачаа.Location = new System.Drawing.Point(2, 26);
+            this.Ачаа.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Ачаа.Name = "Ачаа";
+            this.Ачаа.Size = new System.Drawing.Size(151, 19);
+            this.Ачаа.TabIndex = 0;
+            this.Ачаа.Text = "Ачаа";
+            this.Ачаа.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(2, 97);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(151, 19);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Хүргэлтийн нэр";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(2, 168);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(151, 19);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Хүргэлтийн хаяг";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(2, 239);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(151, 19);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Хот";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(2, 312);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(151, 19);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Улс";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // txt_shipName
             // 
             this.txt_shipName.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -338,24 +337,24 @@
             this.txt_shipName.Size = new System.Drawing.Size(200, 36);
             this.txt_shipName.TabIndex = 21;
             // 
-            // txt_shipAddress
+            // guna2ControlBox2
             // 
-            this.txt_shipAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_shipAddress.DefaultText = "";
-            this.txt_shipAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_shipAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_shipAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_shipAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_shipAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_shipAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_shipAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_shipAddress.Location = new System.Drawing.Point(158, 145);
-            this.txt_shipAddress.Name = "txt_shipAddress";
-            this.txt_shipAddress.PasswordChar = '\0';
-            this.txt_shipAddress.PlaceholderText = "";
-            this.txt_shipAddress.SelectedText = "";
-            this.txt_shipAddress.Size = new System.Drawing.Size(200, 36);
-            this.txt_shipAddress.TabIndex = 22;
+            this.guna2ControlBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.Gainsboro;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(399, 0);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.Size = new System.Drawing.Size(35, 29);
+            this.guna2ControlBox2.TabIndex = 19;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
             // 
             // frm_edit_order
             // 

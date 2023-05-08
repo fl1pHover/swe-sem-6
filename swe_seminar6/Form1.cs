@@ -18,8 +18,7 @@ namespace swe_seminar6
             InitializeComponent();
         }
 
-
-        string db = "Data Source=DESKTOP-FSF2P1H;Initial Catalog=nw;Integrated Security=True";
+       // string db = "Data Source=DESKTOP-FSF2P1H;Initial Catalog=nw;Integrated Security=True";
 
         //laptop 
         // string db = "Data Source=DESKTOP-VUTIQH1;Initial Catalog=nw;Integrated Security=True
@@ -45,7 +44,7 @@ namespace swe_seminar6
                 try
                 {
                     String query = "SELECT * FROM [dbo].[user] WHERE username = '" + guna2TextBox1.Text + "' AND password = '" + "'";
-                    SqlConnection con = new SqlConnection(db);
+                    SqlConnection con = new SqlConnection(Globals.database);
 
 
                     string username = guna2TextBox1.Text;
@@ -68,7 +67,7 @@ namespace swe_seminar6
                         int uid = int.Parse(ds.Tables[0].Rows[0]["id"].ToString());
 
                         new Form2().Show();
-                        this.Hide();
+                        //this.Hide();
                     }
                     else
                     {

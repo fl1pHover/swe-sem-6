@@ -41,8 +41,8 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
@@ -70,8 +70,8 @@
             this.Column1,
             this.Column2,
             this.Column3,
-            this.Column4,
             this.Column5,
+            this.Column4,
             this.Column7,
             this.Column8});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -198,6 +198,7 @@
             this.btnEdit.TabIndex = 4;
             this.btnEdit.Text = "Засах";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // Column6
             // 
@@ -223,17 +224,17 @@
             this.Column3.HeaderText = "Ажил";
             this.Column3.Name = "Column3";
             // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Address";
+            this.Column5.HeaderText = "Хаяг";
+            this.Column5.Name = "Column5";
+            // 
             // Column4
             // 
             this.Column4.DataPropertyName = "City";
             this.Column4.HeaderText = "Хот";
             this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Country";
-            this.Column5.HeaderText = "Улс";
-            this.Column5.Name = "Column5";
             // 
             // Column7
             // 
@@ -274,8 +275,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }

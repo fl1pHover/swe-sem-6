@@ -1,6 +1,6 @@
 ﻿namespace swe_seminar6
 {
-    partial class uc_order
+    partial class uc_supplier
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDlt = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.asd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -50,41 +51,42 @@
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.guna2DataGridView1.ColumnHeadersHeight = 40;
             this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column6,
             this.Column1,
             this.Column2,
+            this.asd,
             this.Column3,
             this.Column4,
             this.Column5});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
             this.guna2DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(3, 3);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowTemplate.Height = 30;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(646, 433);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(664, 506);
             this.guna2DataGridView1.TabIndex = 0;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -107,43 +109,6 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 30;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "OrderID";
-            this.Column6.HeaderText = "OrderID";
-            this.Column6.Name = "Column6";
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Freight";
-            this.Column1.HeaderText = "Ачаа";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "ShipName";
-            this.Column2.HeaderText = "Хүргэлтийн нэр";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "ShipAddress";
-            this.Column3.HeaderText = "Хүргэлтийн хаяг";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "ShipCity";
-            this.Column4.HeaderText = "Хот";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "ShipCountry";
-            this.Column5.HeaderText = "Улс";
-            this.Column5.Name = "Column5";
             // 
             // tableLayoutPanel1
             // 
@@ -159,8 +124,8 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(652, 479);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(670, 552);
+            this.tableLayoutPanel1.TabIndex = 2;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // tableLayoutPanel2
@@ -174,11 +139,11 @@
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnDlt, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnEdit, 3, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 442);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 515);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(646, 34);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(664, 34);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // btnAdd
@@ -190,7 +155,7 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAdd.Location = new System.Drawing.Point(206, 0);
+            this.btnAdd.Location = new System.Drawing.Point(224, 0);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(130, 34);
@@ -208,7 +173,7 @@
             this.btnDlt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDlt.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDlt.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnDlt.Location = new System.Drawing.Point(356, 0);
+            this.btnDlt.Location = new System.Drawing.Point(374, 0);
             this.btnDlt.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnDlt.Name = "btnDlt";
             this.btnDlt.Size = new System.Drawing.Size(130, 34);
@@ -225,7 +190,7 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEdit.Location = new System.Drawing.Point(506, 0);
+            this.btnEdit.Location = new System.Drawing.Point(524, 0);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(130, 34);
@@ -234,14 +199,56 @@
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // uc_order
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "SupplierID";
+            this.Column6.HeaderText = "SupplierID";
+            this.Column6.Name = "Column6";
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "CompanyName";
+            this.Column1.HeaderText = "Компани нэр";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "ContactName";
+            this.Column2.HeaderText = "Харилцах нэр";
+            this.Column2.Name = "Column2";
+            // 
+            // asd
+            // 
+            this.asd.DataPropertyName = "ContactTitle";
+            this.asd.HeaderText = "Албан тушаал";
+            this.asd.Name = "asd";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Address";
+            this.Column3.HeaderText = "Хаяг";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "City";
+            this.Column4.HeaderText = "Хот";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Country";
+            this.Column5.HeaderText = "Улс";
+            this.Column5.Name = "Column5";
+            // 
+            // uc_supplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "uc_order";
-            this.Size = new System.Drawing.Size(652, 479);
-            this.Load += new System.EventHandler(this.uc_order_Load);
+            this.Name = "uc_supplier";
+            this.Size = new System.Drawing.Size(670, 552);
+            this.Load += new System.EventHandler(this.uc_supplier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -252,16 +259,17 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn asd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDlt;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

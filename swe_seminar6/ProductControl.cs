@@ -42,21 +42,12 @@ namespace swe_seminar6
       
         }
 
-
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        private void ProductControl_Load(object sender, EventArgs e)
         {
 
-        }
-       
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        //  if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-        //  {
-        //      dataGridView1.CurrentRow.Selected = true;
-        //      this.id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["ProductID"].FormattedValue.ToString());
-         // }
-        }
+            get_data();
 
+        }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -85,6 +76,7 @@ namespace swe_seminar6
             DataGridViewRow row = guna2DataGridView1.CurrentRow;
             int id = Convert.ToInt32(row.Cells["ProductID"].Value);
             int ret_id = frm_edit.get_data(id);
+            get_data();
             if (id != 0)
             {
                 guna2DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -102,23 +94,6 @@ namespace swe_seminar6
                 }
             }
             get_data();
-          //  frm_edit frm_edit = new frm_edit();
-           // frm_edit.ShowDialog();
-        }
-
-      
-
-        private void ProductControl_Load(object sender, EventArgs e)
-        {
-
-            get_data();
-         
-        }
-
-       
-
-        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
-        {
 
         }
 
@@ -126,12 +101,31 @@ namespace swe_seminar6
         {
             SqlConnection con = new SqlConnection(db);
             con.Open();
-            SqlCommand cmd = new SqlCommand("Delete Users where ProductID");
+            SqlCommand cmd = new SqlCommand("DELETE Users WHERE ProductID = @product_id ", con);
+            cmd.ExecuteNonQuery();
+
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+       
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        //  if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+        //  {
+        //      dataGridView1.CurrentRow.Selected = true;
+        //      this.id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["ProductID"].FormattedValue.ToString());
+         // }
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
     }
 }

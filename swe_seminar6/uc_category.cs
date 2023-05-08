@@ -28,7 +28,7 @@ namespace swe_seminar6
 
         private void get_data()
         {
-            SqlConnection con = new SqlConnection(db);
+            SqlConnection con = new SqlConnection(Globals.database);
             con.Open();
             string query = "SELECT * from Categories";
             SqlDataAdapter adap = new SqlDataAdapter(query, con);

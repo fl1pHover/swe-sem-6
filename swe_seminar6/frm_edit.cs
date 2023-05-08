@@ -17,9 +17,7 @@ namespace swe_seminar6
 
         int product_id = 0;
         public static int ret_product_id = 0;
-        string db = "Data Source=DESKTOP-FSF2P1H;Initial Catalog=nw;Integrated Security=True";
-        //laptop 
-        // string db = "Data Source=DESKTOP-VUTIQH1;Initial Catalog=nw;Integrated Security=True";
+
         public frm_edit()
         {
             InitializeComponent();
@@ -31,9 +29,6 @@ namespace swe_seminar6
             InitializeComponent();
             product_id = _p_id;
         }
-
-     
-
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -49,7 +44,6 @@ namespace swe_seminar6
             {
                 errorProvider1.SetError(txt_name, "Заавал оруулах шаардлагатай");
                 error = true;
-
             }
 
             if (error == true)
@@ -58,7 +52,7 @@ namespace swe_seminar6
             }
             try
             {
-                SqlConnection con = new SqlConnection(db);
+                SqlConnection con = new SqlConnection(Globals.database);
                 con.Open();
                 DataSet ds = new DataSet();
                 SqlCommand com = new SqlCommand("spu_mod_products", con) { CommandType = CommandType.StoredProcedure, CommandTimeout = 300 };
@@ -76,7 +70,6 @@ namespace swe_seminar6
                 }
                 try
                 {
-
                     SqlDataAdapter adap = new SqlDataAdapter(com);
                     adap.Fill(ds);
                     if (ds == null)
@@ -120,19 +113,18 @@ namespace swe_seminar6
 
         private void frm_edit_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(db);
+            SqlConnection con = new SqlConnection(Globals.database);
             con.Open();
             SqlCommand com = new SqlCommand("spu_get_products", con);
             com.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter adap = new SqlDataAdapter(com);
             DataSet ds = new DataSet();
             adap.Fill(ds);
-            ds.Tables[0].TableName = "Category";
+          //  ds.Tables[0].TableName = "Category";
 
             comboBox1.DataSource = ds.Tables[0];
             comboBox1.ValueMember = "CategoryID";
             comboBox1.DisplayMember = "CategoryName";
-
 
             comboBox2.DataSource = ds.Tables[2];
             comboBox2.ValueMember = "SupplierID";

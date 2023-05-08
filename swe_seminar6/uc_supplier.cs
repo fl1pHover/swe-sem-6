@@ -5,43 +5,40 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace swe_seminar6
 {
-    public partial class uc_order : UserControl
+    public partial class uc_supplier : UserControl
     {
 
         public int id;
-        public uc_order()
+        public uc_supplier()
         {
             InitializeComponent();
         }
+
         private void get_data()
         {
             SqlConnection con = new SqlConnection(Globals.database);
             con.Open();
-            string query = "SELECT OrderID, Freight,ShipName, ShipAddress, ShipCity, ShipCountry from Orders";
+            string query = "SELECT SupplierID, CompanyName,ContactName, ContactTitle, Address, City,Country from Suppliers";
             SqlDataAdapter adap = new SqlDataAdapter(query, con);
             DataSet ds = new DataSet();
             adap.Fill(ds);
-
             guna2DataGridView1.DataSource = ds.Tables[0];
-
-          
         }
 
-        private void uc_order_Load(object sender, EventArgs e)
+        private void uc_supplier_Load(object sender, EventArgs e)
         {
             get_data();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            int id = frm_edit_order.get_data(0);
+            int id = frm_edit_supplier.get_data(0);
             get_data();
             if (id != 0)
             {
@@ -64,10 +61,10 @@ namespace swe_seminar6
         private void btnEdit_Click(object sender, EventArgs e)
         {
             DataGridViewRow row = guna2DataGridView1.CurrentRow;
-            //  int id = Convert.ToInt32(row.Cells["OrderID"].Value);
+            //int id = Convert.ToInt32(row.Cells["SupplierID"].Value);
             int id = Convert.ToInt32(guna2DataGridView1.SelectedCells[0].Value);
-       
-            int ret_id = frm_edit_order.get_data(id);
+
+            int ret_id = frm_edit_supplier.get_data(id);
             get_data();
             if (id != 0)
             {
@@ -85,7 +82,6 @@ namespace swe_seminar6
                     }
                 }
             }
-      
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -93,9 +89,6 @@ namespace swe_seminar6
 
         }
 
-        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
+    
     }
 }

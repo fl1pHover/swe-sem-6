@@ -8,52 +8,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace swe_seminar6
 {
-    public partial class frm_edit_order : Form
+    public partial class frm_edit_supplier : Form
     {
 
-        int order_id = 0;
-        public static int ret_order_id = 0;
+        int supplier_id = 0;
+        public static int ret_supplier_id = 0;
         string db = "Data Source=DESKTOP-FSF2P1H;Initial Catalog=nw;Integrated Security=True";
-        public frm_edit_order()
+        public frm_edit_supplier()
         {
             InitializeComponent();
         }
-
-        public frm_edit_order(int _o_id)
+        public frm_edit_supplier(int _s_id)
         {
             InitializeComponent();
-            order_id = _o_id;
+            supplier_id = _s_id;
         }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            errorProvider1.Clear();
-            errorProvider2.Clear();
- 
             try
             {
                 SqlConnection con = new SqlConnection(Globals.database);
                 con.Open();
                 DataSet ds = new DataSet();
-                SqlCommand com = new SqlCommand("spu_mod_order", con) { CommandType = CommandType.StoredProcedure, CommandTimeout = 300 };
-                SqlParameter[] parameters = new SqlParameter[6];
-         
-                parameters[0] = new SqlParameter("@order_id", order_id);
-                parameters[1] = new SqlParameter("@Freight", Convert.ToDecimal(txt_freight.Text));
-                parameters[2] = new SqlParameter("@ShipName", txt_shipName.Text);
-                parameters[3] = new SqlParameter("@ShipAddress", txt_shipAddress.Text);
-                parameters[4] = new SqlParameter("@ShipCity", txt_city.Text);
-                parameters[5] = new SqlParameter("@ShipCountry", txt_country.Text);
-           
+                SqlCommand com = new SqlCommand("mod_supplier", con) { CommandType = CommandType.StoredProcedure, CommandTimeout = 300 };
+                SqlParameter[] parameters = new SqlParameter[7];
+
+                parameters[0] = new SqlParameter("@supplier_id", supplier_id);
+                parameters[1] = new SqlParameter("@CompanyName", txt_company.Text);
+                parameters[2] = new SqlParameter("@ContactName", txt_contact.Text);
+                parameters[3] = new SqlParameter("@ContactTitle", txt_contactTitle.Text);
+                parameters[4] = new SqlParameter("@City", txt_address.Text);
+                parameters[5] = new SqlParameter("@Address", txt_address.Text);
+                parameters[6] = new SqlParameter("@Country", txt_city.Text);
+
                 int parameters_leght = parameters.Length - 1;
                 for (int index = 0; index <= parameters_leght; index++)
                 {
@@ -61,6 +51,7 @@ namespace swe_seminar6
                 }
                 try
                 {
+
                     SqlDataAdapter adap = new SqlDataAdapter(com);
                     adap.Fill(ds);
                     if (ds == null)
@@ -71,7 +62,7 @@ namespace swe_seminar6
                     }
                     else
                     {
-                        ret_order_id = Convert.ToInt32(ds.Tables[0].Rows[0]["order_id"]);
+                        ret_supplier_id = Convert.ToInt32(ds.Tables[0].Rows[0]["supplier_id"]);
                         MessageBox.Show("Амжилттай хадгалагдлаа");
                         Close();
                     }
@@ -89,26 +80,25 @@ namespace swe_seminar6
                 MessageBox.Show("Хадгалалт амжилтгүй");
             }
         }
-
-        public static int get_data(int o_id)
+        public static int get_data(int s_id)
         {
-            frm_edit_order frm = new frm_edit_order(o_id);
+            frm_edit_supplier frm = new frm_edit_supplier(s_id);
             frm.ShowDialog();
-            return ret_order_id;
+            return ret_supplier_id;
         }
 
-        private void frm_edit_order_Load(object sender, EventArgs e)
+        private void frm_edit_supplier_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(Globals.database);
             con.Open();
-            SqlCommand com = new SqlCommand("spu_get_order", con);
+            SqlCommand com = new SqlCommand("get_supplier", con);
             com.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter adap = new SqlDataAdapter(com);
             DataSet ds = new DataSet();
             adap.Fill(ds);
-           // ds.Tables[0].TableName = "Orders";
+            // ds.Tables[0].TableName = "Orders";
 
-            SqlCommand com1 = new SqlCommand("SELECT * FROM Orders WHERE OrderID = " + order_id + "", con);
+            SqlCommand com1 = new SqlCommand("SELECT SupplierID, CompanyName,ContactName, ContactTitle, Address, City,Country FROM Suppliers WHERE SupplierID = " + supplier_id + "", con);
             SqlDataAdapter adap1 = new SqlDataAdapter(com1);
             DataSet ds1 = new DataSet();
             adap1.Fill(ds1);
@@ -117,11 +107,12 @@ namespace swe_seminar6
                 return;
             }
 
-            txt_freight.Text = ds1.Tables[0].Rows[0]["Freight"].ToString();
-            txt_shipName.Text = ds1.Tables[0].Rows[0]["ShipName"].ToString();
-            txt_shipAddress.Text = ds1.Tables[0].Rows[0]["ShipAddress"].ToString();
-            txt_city.Text = ds1.Tables[0].Rows[0]["ShipCity"].ToString();
-            txt_country.Text = ds1.Tables[0].Rows[0]["ShipCountry"].ToString();
+            txt_company.Text = ds1.Tables[0].Rows[0]["CompanyName"].ToString();
+            txt_contact.Text = ds1.Tables[0].Rows[0]["ContactName"].ToString();
+            txt_contactTitle.Text = ds1.Tables[0].Rows[0]["ContactTitle"].ToString();
+            txt_city.Text = ds1.Tables[0].Rows[0]["City"].ToString();
+            txt_address.Text = ds1.Tables[0].Rows[0]["Address"].ToString();
+            txt_country.Text = ds1.Tables[0].Rows[0]["Country"].ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)

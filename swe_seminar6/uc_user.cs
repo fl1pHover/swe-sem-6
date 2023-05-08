@@ -31,8 +31,7 @@ namespace swe_seminar6
 
         protected override void OnLoad(EventArgs e)
         {
-            
-            SqlConnection con = new SqlConnection(db);
+            SqlConnection con = new SqlConnection(Globals.database);
             con.Open();
       
             SqlCommand cmd = new SqlCommand("SELECT * FROM Users WHERE id='" + 1 + "'", con);
@@ -42,6 +41,8 @@ namespace swe_seminar6
 
 
             lblUsername.Text = ds.Tables[0].Rows[0]["username"].ToString();
+            txt_headname.Text = ds.Tables[0].Rows[0]["lastname"].ToString() + " " + ds.Tables[0].Rows[0]["firstname"].ToString()
+             + " "  + "/" + ds.Tables[0].Rows[0]["username"].ToString() + "/";
             lblPass.Text = ds.Tables[0].Rows[0]["password"].ToString();
             lblType.Text = ds.Tables[0].Rows[0]["id"].ToString();
             lblFirst.Text = ds.Tables[0].Rows[0]["firstname"].ToString();
@@ -66,7 +67,7 @@ namespace swe_seminar6
                 com1.Connection = con;
                 com.ExecuteNonQuery();
                 MessageBox.Show("Амжилттай");
-                string query2 = "SELECT * FROM Users WHERE id = " + u_id + "";
+                string query2 = "SELECT * FROM Users WHERE id = " + 1 + "";
                 SqlDataAdapter adap = new SqlDataAdapter(query2, con);
                 DataSet ds = new DataSet();
                 adap.Fill(ds);
@@ -88,6 +89,21 @@ namespace swe_seminar6
         }
 
         private void lblLast_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtMail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPhone_TextChanged(object sender, EventArgs e)
         {
 
         }

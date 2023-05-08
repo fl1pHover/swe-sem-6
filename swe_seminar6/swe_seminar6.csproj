@@ -215,11 +215,24 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_edit_supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_edit_supplier.Designer.cs">
+      <DependentUpon>frm_edit_supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_edit_employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_edit_employee.Designer.cs">
+      <DependentUpon>frm_edit_employee.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_edit_order.cs">
       <SubType>Form</SubType>
@@ -274,6 +287,12 @@
     <Compile Include="uc_employees.Designer.cs">
       <DependentUpon>uc_employees.cs</DependentUpon>
     </Compile>
+    <Compile Include="uc_supplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_supplier.Designer.cs">
+      <DependentUpon>uc_supplier.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -286,8 +305,14 @@
     <EmbeddedResource Include="frm_edit.resx">
       <DependentUpon>frm_edit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_edit_employee.resx">
+      <DependentUpon>frm_edit_employee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_edit_order.resx">
       <DependentUpon>frm_edit_order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_edit_supplier.resx">
+      <DependentUpon>frm_edit_supplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductControl.resx">
       <DependentUpon>ProductControl.cs</DependentUpon>
@@ -312,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uc_employees.resx">
       <DependentUpon>uc_employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_supplier.resx">
+      <DependentUpon>uc_supplier.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
