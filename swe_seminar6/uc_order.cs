@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace swe_seminar6
     public partial class uc_order : UserControl
     {
 
-        public int id;
+        public int oid;
         public uc_order()
         {
             InitializeComponent();
@@ -66,8 +67,8 @@ namespace swe_seminar6
             DataGridViewRow row = guna2DataGridView1.CurrentRow;
             //  int id = Convert.ToInt32(row.Cells["OrderID"].Value);
             int id = Convert.ToInt32(guna2DataGridView1.SelectedCells[0].Value);
-       
-            int ret_id = frm_edit_order.get_data(id);
+           oid = id;
+            int ret_id = frm_edit_order.get_data(oid);
             get_data();
             if (id != 0)
             {
@@ -95,7 +96,50 @@ namespace swe_seminar6
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                guna2DataGridView1.CurrentRow.Selected = true;
+                oid = int.Parse(guna2DataGridView1.SelectedCells[0].FormattedValue.ToString());
+                textBox1.Text = oid.ToString();
+            }
+        }
+
+        private void btnDlt_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(Globals.database);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("delOrder", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlParameter[] param = new SqlParameter[1];
+
+            param[0] = new SqlParameter("@oid", oid);
+            cmd.Parameters.Add(param[0]);
+            string mes = "Та итгэлтэй байна уу?";
+            string title = "Warning";
+
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(mes, title, buttons);
+
+            try
+            {
+                if (result == DialogResult.Yes)
+                {
+                   
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Амжилттай устгалаа");
+                    get_data();
+                    
+                }
+                else
+                {
+
+                }
             
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
